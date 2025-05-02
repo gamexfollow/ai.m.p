@@ -1,9 +1,8 @@
 ﻿<Application x:Class="AI.M.P.UI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AI.M.P.UI"
-             StartupUri="MainWindow.xaml">
+             Startup="OnStartup">
     <Application.Resources>
-         
+        <!-- Aquí van estilos o recursos XAML, nada más -->
     </Application.Resources>
 </Application>

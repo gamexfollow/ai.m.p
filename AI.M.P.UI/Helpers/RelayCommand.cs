@@ -1,0 +1,24 @@
+﻿using System;
+using System.Threading.Tasks;
+using System.Windows.Input;
+
+namespace AI.M.P.UI.Helpers
+{
+    public class RelayCommand : ICommand
+    {
+        private readonly Func<bool> _canExecute;
+        private readonly Func<Task> _executeAsync;
+
+        public RelayCommand(Func<Task> executeAsync, Func<bool>? canExecute = null)
+        {
+            _executeAsync = executeAsync;
+            _canExecute = canExecute ?? (() => true);
+        }
+
+        public bool CanExecute(object? parameter) => _canExecute();
+        public async void Execute(object? parameter) => await _executeAsync();
+        public event EventHandler? CanExecuteChanged;
+        public void RaiseCanExecuteChanged() =>
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+    }
+}

@@ -19,7 +19,7 @@ namespace AI.M.P.UI
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ViewModels.MainWindowViewModel();
+           
 
         }
     }
