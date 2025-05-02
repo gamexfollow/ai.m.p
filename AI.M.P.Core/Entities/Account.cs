@@ -4,6 +4,9 @@ namespace AI.M.P.Core.Entities
 {
     public class Account
     {
-        // Aquí irán tus propiedades y métodos.
+        public int Id { get; set; }
+        public string Email { get; set; } = null!;
+        public string DisplayName { get; set; } = null!;
+        public DateTime CreatedAt { get; set; }
     }
 }
